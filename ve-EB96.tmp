@@ -1,0 +1,107 @@
+﻿<%@ Page Language="C#" MasterPageFile="~/rabbu.master" AutoEventWireup="true" CodeFile="UserAuthentication.aspx.cs" Inherits="UserAuthentication" Title="Classifieds" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+    <style type="text/css">
+
+        .style16
+        {
+            height: 29px;
+        }
+        .style11
+        {
+            width: 102px;
+            height: 29px;
+        }
+        
+        .style5
+        {
+            width: 100%;
+            height: 1px;
+        }
+        .style20
+        {
+            width: 237px;
+            height: 32px;
+        }
+        .style19
+        {
+            width: 108px;
+            height: 74px;
+        }
+        .style21
+        {
+            width: 102px;
+            height: 32px;
+        }
+        .style22
+        {
+            width: 237px;
+            height: 29px;
+        }
+    </style>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
+    <p>
+        <br />
+    </p>
+    <table align="center" class="style3" style="height: 317px; width: 550px">
+        <tr>
+            <td align="right" class="style22">
+                <asp:Label ID="Label2" runat="server" Text="User ID :" Font-Bold="True" 
+                    Font-Size="Medium" ForeColor="Black"></asp:Label>
+            </td>
+            <td class="style11">
+                <asp:TextBox ID="Txt_Userid" runat="server"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+                    ControlToValidate="Txt_Userid" ErrorMessage="Must Enter The Uname" 
+                    ValidationGroup="a">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td align="right" class="style22">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Label ID="Label3" runat="server" Text="Password :" Font-Bold="True" 
+                    Font-Size="Medium" ForeColor="Black"></asp:Label>
+            </td>
+            <td class="style11">
+                <asp:TextBox ID="Txt_Pwd" runat="server" TextMode="Password" 
+                    ValidationGroup="a"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+                    ControlToValidate="Txt_Pwd" ErrorMessage="Must Enter The Password" 
+                    ValidationGroup="a">*</asp:RequiredFieldValidator>
+            </td>
+        </tr>
+        <tr>
+            <td align="left" class="style16" colspan="2">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                &nbsp;<asp:Button ID="Button1" runat="server" CssClass="style5" Height="28px" 
+                    onclick="Button1_Click" Text="SIGN IN" Width="120px" Font-Bold="True" 
+                    Font-Size="Medium" />
+                &nbsp;&nbsp; <asp:Label ID="lbl_AdvId" runat="server" Visible="False" 
+                    ForeColor="Black"></asp:Label>
+                &nbsp;&nbsp;&nbsp;
+                <asp:Label ID="LBLVALIDATION" runat="server" Enabled="False" 
+                    Text="LBLVALIDATION" Visible="False" ForeColor="Black"></asp:Label>
+            </td>
+        </tr>
+        <tr>
+            <td align="center" class="style20">
+                <asp:LinkButton ID="LinkButton12" runat="server" Font-Bold="True" 
+                    Font-Size="Large" ForeColor="White" PostBackUrl="~/Registration.aspx">New User?</asp:LinkButton>
+            </td>
+            <td align="center" class="style21">
+                &nbsp;<asp:LinkButton ID="LinkButton11" runat="server" 
+                    PostBackUrl="~/Forgotpwd1.aspx" Font-Bold="True" Font-Size="Medium" 
+                    ForeColor="Black" Width="149px">Forgot Password?</asp:LinkButton>
+            </td>
+        </tr>
+        <tr>
+            <td class="style19" colspan="2">
+                <asp:ValidationSummary ID="ValidationSummary1" runat="server" 
+                    ShowMessageBox="True" ShowSummary="False" ValidationGroup="a" 
+                    Height="39px" Width="537px" />
+            </td>
+        </tr>
+        </table>
+</asp:Content>
+

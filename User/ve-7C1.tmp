@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections;
+using System.Configuration;
+using System.Data;
+using System.Linq;
+using System.Web;
+using System.Web.Security;
+using System.Web.UI;
+using System.Web.UI.HtmlControls;
+using System.Web.UI.WebControls;
+using System.Web.UI.WebControls.WebParts;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.Data.Sql;
+public partial class User_Viewads : System.Web.UI.Page
+{
+    protected void Page_Load(object sender, EventArgs e)
+    {
+        if (!IsPostBack)
+        {
+
+            string date1 = DateTime.Now.ToString("MM/dd/yyyy");
+            string query1 = "update Advr set Status='Expired' where Expiry_Date='" + date1 + "'";
+            
+            DAL.SqlHelper.ExecuteNonQuery(clsConnection.Connection, CommandType.Text, query1);
+
+
+            string query2 = "select * from Advr where Status='Approved'";
+            
+            DataSet ds = new DataSet();
+            ds = DAL.SqlHelper.ExecuteDataset(clsConnection.Connection, CommandType.Text, query2);
+
+            int num_rows = ds.Tables[0].Rows.Count;
+            int i = 1;
+
+            DateTime expdate = DateTime.Parse(ds.Tables[0].Rows[0]["Expiry_Date"].ToString()); ;
+            DateTime today_dt = DateTime.Parse(date1);
+            TimeSpan ts;
+            string add_id;
+            while (i < num_rows)
+            {
+                //expdate = 
+                add_id = ds.Tables[0].Rows[i]["Adv_id"].ToString();
+                ts = expdate.Subtract(today_dt);
+                string time_span = ts.Days.ToString();
+
+                string query3 = "update Advr set Days_Left='" + time_span + "' where Adv_id='" + add_id + "'";
+                DAL.SqlHelper.ExecuteNonQuery(clsConnection.Connection, CommandType.Text, query3);
+
+                i++;
+
+
+            }
+
+
+            string uid = Session["User_Name"].ToString();
+            string Query = "select * from Advr where Status='Approved' and Posted_By !='" + uid + "'";
+            DataSet ds1 = new DataSet();
+            ds1 = DAL.SqlHelper.ExecuteDataset(clsConnection.Connection, CommandType.Text, Query);
+
+            GridView1.DataSource = ds1;
+            GridView1.DataBind();
+
+        }
+    }
+}

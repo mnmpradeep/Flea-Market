@@ -1,0 +1,168 @@
+﻿<%--/*
+
+**********login master page ************
+ Name of the Developer: Pradeep Mahabhashyam
+ Name of the module: login master page
+ Task Number: 1.0
+ Functionality of the module: This is the main master page for login where design layout is written, and this design is common in all pages of login 
+ Date last modified: 04/27/2017    */--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="guest.master.cs" Inherits="guest" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>UHCL FLEAMARKET</title>
+<link rel="icon" type="image/png"  href="/favicon-96x96.png"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style0{
+            width:350px;
+            height:150px;
+        }
+        .style1
+        {
+            width: 100%;
+            height: 425px;
+            /*background-image:url("images/page-wrapper-bg.png");
+            background-repeat:repeat;*/
+            
+        }
+        .style3
+        {
+        }
+        .style4
+        {
+            width: 100%;
+            height: 455px;
+             margin-top:-70px;
+        }
+        .style6
+        {
+            width: 150px;
+        }
+        .style8
+        {
+            width: 975px;
+        }
+        .style9
+        {
+            width: 100%;
+            height: 482px;
+        }
+        .style10
+        {
+            width: 975px;
+            height: 574px;
+        }
+        /*New Styles*/
+        #wrap {
+            width: 975px;
+            margin: 0 auto;
+        }
+        #menu {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	line-height: 40px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	color: #FFFFFF;
+    font-weight:normal;
+}
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header-wrapper">
+        <div id="header" class="container">
+       <div id="logo">
+				<a href="Home.aspx">
+				<img src="IMAGES/logo.png" alt="img" width="220px" height="120px"/></a>
+			</div>
+        
+          <div id="menu-wrapper">
+      
+           
+		  <div>
+              
+				<ul id="menu">
+					<li class="current_page_item" style="white-space:nowrap"><a href="Home.aspx">Home</a></li>
+					<li><a href="UserAuthentication.aspx" class="current_page_item" runat="server">Login </a></li>
+					<li><a href="Aboutus.aspx">About Us </a></li>
+					<li><a href="Help.aspx">Help</a></li>
+				</ul>
+		  </div>
+              </div>
+            </div>
+	</div>
+       
+	 
+              
+              	<%--	<div id="prew_img">
+				
+				   <ul class="round">
+			<li><img class="mySlides" src="IMAGES/header1.jpg" alt="" /></li>
+			<li><a href="Registration.aspx"><img class="mySlides"src="IMAGES/header2.png" alt="" /></a></li>
+			<li><img class="mySlides"src="IMAGES/header3.jpg" alt="" /></li>
+			<li><img class="mySlides"src="IMAGES/header4.jpg" alt="" /></li>
+			<li><img class="mySlides"src="IMAGES/header5.jpg" alt="" /></li>
+			<li><img class="mySlides"src="IMAGES/header6.jpg" alt="" /></li>
+</ul>
+<script type="text/javascript" src="lib/jquery.js"></script>
+<script type="text/javascript" src="lib/jquery.roundabout.min.js"></script>
+<script type="text/javascript">
+			
+    $(document).ready(function () {
+        $('.round').roundabout();
+
+    });
+			
+		</script>
+			
+				</div>--%>
+
+         <table class="style1" >   <tr>
+                <td class="style3" valign="top">
+                    <table class="style4">
+                        <tr>
+                            <td class="style6" rowspan="2">
+                            </td>
+                            <td class="style10" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                    <p>
+                                        -<br />
+                                    </p>
+                                </asp:ContentPlaceHolder>
+                            </td>
+                           
+                        </tr>
+                        <tr>
+                            <td class="style8">
+                                &nbsp;</td>
+                        </tr>
+                    </table>
+                                
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;</td>
+            </tr>
+        </table>
+    
+            
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "classifieds -final", ".", "{7AC84D93-4E18-482F-9F45-D8BF614E3896}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFramework = "3.5"
+		Debug.AspNetCompiler.VirtualPath = "/classifieds -final"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\classifieds -final\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\classifieds -final\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/classifieds -final"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\Desktop\classifieds -final\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\classifieds -final\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "64273"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7AC84D93-4E18-482F-9F45-D8BF614E3896}.Debug|.NET.ActiveCfg = Debug|.NET
+		{7AC84D93-4E18-482F-9F45-D8BF614E3896}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,337 @@
+﻿<%--/*
+
+********** user master page ************
+ Name of the Developer: Pradeep Mahabhashyam
+ Name of the module: user master page
+ Task Number: 2.0
+ Functionality of the module: This is the main master page for user where design layout is written, and this design is common in all pages of user
+ Date last modified: 04/27/2017    */--%>
+
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="user.master.cs" Inherits="User_user"  %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+   
+    <title>UHCL Flea Market</title>
+    <link rel="icon" type=".image/png"  href="/favicon-96x96.png"/>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .style1
+        {
+           width: 100%;
+            height: 100%;
+           margin-left:240px;
+            
+        }
+        .style3
+        {
+        }
+        .style4
+        {
+            width: 100%;
+            height: 55px;
+            margin-top:-70px;
+        }
+        .style6
+        {
+            width: 108px;
+        }
+        .style8
+        {
+            width: 929px;
+        }
+        .style9
+        {
+            width: 55%;
+            height: 444px;
+        }
+        .style10
+        {
+            width: 929px;
+            height: 124px;
+            
+        }
+        .style19{
+            width:500px;
+            height:125px;
+            padding-right:350px;
+
+        }
+        .style45{
+             width: 140px;
+            margin-left:695px;
+            margin-bottom:150px;
+            font-family: 'Arvo', serif;
+	font-size: 20px;
+        }
+#menu-wrapper1 {
+	float: right;
+	width: 850px;
+	height: 112px;
+	padding: 45px 0px 0px 0px;
+}
+
+#menu-content1 {
+	overflow: hidden;
+	height: 187px;
+}
+
+#menu1 {
+	height: 40px;
+	margin: 0px;
+	padding: 0px;
+	list-style: none;
+	line-height: 40px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	color: #FFFFFF;
+    font-weight:normal;
+}
+
+#menu1 li {
+	float: left;
+	height: 40px;
+	margin-right: 20px;
+}
+
+#menu1 a {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+#menu1 a:hover {
+	text-decoration: none;
+	color:yellow;
+}
+#menu1 a:active{
+	color:yellow;
+}
+
+#menu1 .arrow {
+	background: url(images/menu_bg05.png) no-repeat right top;
+}
+
+#menu1 li span {
+	display: block;
+	height: 40px;
+	/*padding: 0px 20px 0px 20px;*/
+}
+
+
+
+      
+        .dropdown {
+    
+    overflow: hidden;
+}
+
+.dropdown  {
+  
+	border-radius: 5px;
+	list-style: none;
+	text-shadow: 1px 1px 0px rgba(55, 30, 24, 1);
+	line-height: 40px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	
+    float: left;
+	height: 40px;
+	margin-right: 60px;
+	
+
+}
+
+/*.container a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}*/
+
+
+ ul li ul.dropdown-content li{
+        display: block;
+    }
+ ul{
+        padding: 0;
+        list-style: none;
+       
+    }
+    ul li{
+        display: inline-block;
+        position: relative;
+        line-height: 21px;
+        text-align: left;
+    }
+    ul li a{
+        display: block;
+        padding: 8px 25px;
+      
+        text-decoration: none;
+    }
+    ul li a:hover{
+     
+    }
+    ul li ul.dropdown{
+        min-width: 100%; /* Set width of the dropdown */
+     background-color:gray;
+        display: none;
+        position: absolute;
+        z-index: 599;
+        left: 0;
+        max-height: 150px;
+
+        
+    }
+    ul li:hover ul.dropdown{
+        display: block;
+        height:800px;
+        width:180px; /* Display the dropdown */
+    }
+    ul li ul.dropdown li{
+        display: block;
+        /*width:50px;*/
+        /*height: 109px;*/
+	
+	border-top: 1px solid #391F19;
+	line-height: 39px;
+	color: #FFFFFF;
+    }
+    /**/
+    .dropdown1  {
+  
+	border-radius: 5px;
+	list-style: none;
+	text-shadow: 1px 1px 0px rgba(55, 30, 24, 1);
+	line-height: 40px;
+	letter-spacing: -1px;
+	text-decoration: none;
+	font-family: 'Arvo', serif;
+	font-size: 20px;
+	
+    float: left;
+	height: 40px;
+	margin-right: 60px;
+	
+
+}
+     ul li ul.dropdown1{
+        min-width: 100%; /* Set width of the dropdown */
+       background-color:gray;
+        display: none;
+        position: absolute;
+        z-index: 599;
+        left: 0;
+        max-height: 250px;
+
+        
+    }
+    ul li:hover ul.dropdown1{
+        display: block;
+        height:1000px;
+        width:180px; /* Display the dropdown */
+    }
+    ul li ul.dropdown1 li{
+        display: block;
+        width:180px;
+        /*height: 109px;*/
+	
+	border-top: 1px solid #391F19;
+	line-height: 39px;
+	color: #FFFFFF;
+    }
+
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="header-wrapper">
+        <div id="header" class="container">
+       <div id="logo">
+				<a href="Homepage.aspx">
+				<img src="../IMAGES/logo.png" alt="img"width="220px" height="120px"/></a>
+			</div>
+        
+          <div id="menu-wrapper1">
+      
+           <asp:Label ID="Label2" runat="server"  
+                        CssClass="style45"></asp:Label>
+		  
+    
+              <ul id="menu1">
+        <li class="current_page_item"><a href="Homepage.aspx">Home</a></li>
+        <li >
+            <a href="#">My Profile</a>
+            <ul class="dropdown">
+              <li> <a href="ViewProfile.aspx"><span style="width:180px">View Profile</span>  </a></li>
+					<li><a href="UpdateProfile.aspx"><span style="width:180px">Update Profile</span> </a></li>
+					<li><a href="ChangePassword.aspx"><span style="width:180px">Change Password</span> </a></li>
+            </ul>
+        </li>
+                  <li><a href="PlaceAdd.aspx">Place Ad </a></li>
+                    <li >
+            <a href="#">My Posts</a>
+            <ul class="dropdown1">
+              <li><a href="Modifyad.aspx"><span style="width:150px">Modify Ad</span></a></li>
+							<li><a href="Deletead.aspx"><span style="width:150px">Delete Ad</span></a></li>
+							<li><a href="Viewmyposts.aspx"><span style="width:150px">My Ad's</span></a></li>
+                <li><a href="Viewcomments.aspx"><span style="width:150px">View Comments</span></a></li>
+            </ul>
+        </li>
+               
+                 <li><a href="Help.aspx">Help</a></li>  
+       <li><a href="../UserAuthentication.aspx">Logout</a></li>
+    </ul>
+             
+              </div>
+            </div>
+	</div>
+       
+                    <table class="style4">
+                        <tr>
+                            <td class="style6" rowspan="2">
+                            </td>
+                            <td class="style10" valign="top">
+                                <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td class="style19" align="left" valign="top">
+                                 <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                                </asp:ContentPlaceHolder>
+                            </td>
+                            <td rowspan="2" valign="top"></td></tr></table>  
+            
+	
+	<!-- end #page -->
+
+<%--        <table>
+                        <tr>
+                            <td class="style8">
+                                &nbsp;</td>
+                        </tr>
+                  
+                           
+                                
+                        <tr><td>    </td>
+                        </tr>
+                   <tr><td>
+                </td>
+                <td>
+                    &nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    &nbsp;</td>
+            </tr>
+        </table>--%>
+   
+       
+    </form>
+</body>
+</html>
